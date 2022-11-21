@@ -49,4 +49,5 @@ def main_game():
             guess = try_input(amount_of_tries)
             amount_of_tries += 1
 
-main_game()
+if __name__ == '__main__':
+    main_game()
