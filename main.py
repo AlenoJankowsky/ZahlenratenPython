@@ -16,7 +16,7 @@ def try_input():
         else:
             return guess
 
-def test_input(random_number, guess, amount_of_tries):
+def guess_is_correct(random_number, guess, amount_of_tries):
     if guess > random_number:
         print("Dein Versuch ist zu hoch. Bitte versuche es nochmal: ", end="")
 
@@ -32,13 +32,12 @@ def test_input(random_number, guess, amount_of_tries):
 
         return True
     
-
 def main_game():
         welcome_username_prompt()
         random_number = random.randint(1, 20)
         amount_of_tries = 1
         guess = try_input()
-        while not test_input(random_number, guess, amount_of_tries):
+        while not guess_is_correct(random_number, guess, amount_of_tries):
             guess = try_input()
             amount_of_tries += 1
 
