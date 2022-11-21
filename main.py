@@ -4,21 +4,14 @@ def welcome_username_prompt():
     user_name = input("Bitte geben Sie Ihren Benutzernamen ein: ")
     print(f"Hallo {user_name}! Ich denke an eine Zahl zwischen 1 und 20. Welche Zahl ist es?")
 
-def try_input(amount_of_tries):
+def try_input():
     while True:
         try: 
-            if amount_of_tries == 1:
-                guess = int(input("Bitte geben Sie eine Zahl zwischen 1 und 20 ein: "))
-            else: 
-                guess = int(input())
-
+            guess = int(input("Bitte geben Sie eine Zahl zwischen 1 und 20 ein: "))
             if (1 > guess > 20):
                 raise ValueError
         except ValueError:
-            if amount_of_tries == 1:
-                print("Eingabe unzulaessig.")
-            else: 
-                print("Eingabe unzulaessig. Bitte geben Sie erneut eine Zahl zwischen 1 und 20 ein:  ", end="")
+            print("Eingabe unzulaessig. ", end="")
             continue
         else:
             return guess
@@ -44,9 +37,9 @@ def main_game():
         welcome_username_prompt()
         random_number = random.randint(1, 20)
         amount_of_tries = 1
-        guess = try_input(amount_of_tries)
+        guess = try_input()
         while not test_input(random_number, guess, amount_of_tries):
-            guess = try_input(amount_of_tries)
+            guess = try_input()
             amount_of_tries += 1
 
 if __name__ == '__main__':
