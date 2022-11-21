@@ -12,7 +12,7 @@ def try_input(amount_of_tries):
             else: 
                 guess = int(input())
 
-            if (guess < 1 or guess > 20):
+            if (1 > guess > 20):
                 raise ValueError
         except ValueError:
             if amount_of_tries == 1:
