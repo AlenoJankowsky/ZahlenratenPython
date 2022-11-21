@@ -1,7 +1,8 @@
 import random
 
-MIN_NUM = 5
-MAX_NUM = 19
+MIN_NUM = 1
+MAX_NUM = 100
+BOUNDARY_VALUE = 10
 
 def welcome_username_prompt(): 
     user_name = input("Bitte geben Sie Ihren Benutzernamen ein: ")
