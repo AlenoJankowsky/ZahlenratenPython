@@ -6,22 +6,22 @@ def welcome_username_prompt():
 
 def try_input(amount_of_tries):
     while True:
-            try: 
-                if amount_of_tries == 1:
-                    guess = int(input("Bitte geben Sie eine Zahl zwischen 1 und 20 ein: "))
-                else: 
-                    guess = int(input())
+        try: 
+            if amount_of_tries == 1:
+                guess = int(input("Bitte geben Sie eine Zahl zwischen 1 und 20 ein: "))
+            else: 
+                guess = int(input())
 
-                if (guess < 1 or guess > 20):
-                    raise ValueError
-            except ValueError:
-                if amount_of_tries == 1:
-                    print("Eingabe unzulaessig.")
-                else: 
-                    print("Eingabe unzulaessig. Bitte geben Sie erneut eine Zahl zwischen 1 und 20 ein:  ", end="")
-                continue
-            else:
-                return guess
+            if (guess < 1 or guess > 20):
+                raise ValueError
+        except ValueError:
+            if amount_of_tries == 1:
+                print("Eingabe unzulaessig.")
+            else: 
+                print("Eingabe unzulaessig. Bitte geben Sie erneut eine Zahl zwischen 1 und 20 ein:  ", end="")
+            continue
+        else:
+            return guess
 
 def test_input(random_number, guess, amount_of_tries):
     if guess > random_number:
