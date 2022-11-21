@@ -1,5 +1,4 @@
 import random
-import sys
 
 user_name = input("Bitte geben Sie Ihren Benutzernamen ein: ")
 print(f"Hallo {user_name}! Ich denke an eine Zahl zwischen 1 und 20. Welche Zahl ist es?")
@@ -47,5 +46,5 @@ def main_game():
         while not test_input(random_number, guess, amount_of_tries):
             guess = try_input(amount_of_tries)
             amount_of_tries += 1
-            
+
 main_game()
