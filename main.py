@@ -13,11 +13,10 @@ def try_input():
             guess = int(input(f"Bitte geben Sie eine Zahl zwischen {MIN_NUM} und {MAX_NUM} ein: "))
             if (MIN_NUM > guess or guess > MAX_NUM):
                 raise ValueError
+            return guess
         except ValueError:
             print("Eingabe unzulaessig. ", end="")
             continue
-        else:
-            return guess
 
 def guess_is_correct(random_number, guess, amount_of_tries):
     if guess > random_number:
