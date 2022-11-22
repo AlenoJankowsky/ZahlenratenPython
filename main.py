@@ -1,4 +1,4 @@
-import random
+from random import randint
 
 MIN_NUM = 5
 MAX_NUM = 19
@@ -47,7 +47,7 @@ def guess_is_correct(random_number, guess, amount_of_tries):
 
 def main_game():
     welcome_username_prompt()
-    random_number = random.randint(MIN_NUM, MAX_NUM)
+    random_number = randint(MIN_NUM, MAX_NUM)
     amount_of_tries = 1
     guess = try_input()
     while not guess_is_correct(random_number, guess, amount_of_tries):
