@@ -23,7 +23,6 @@ def try_input():
                 raise ValueError
 
             return guess
-            
         except ValueError:
             print("Eingabe unzulaessig. ", end="")
             continue
