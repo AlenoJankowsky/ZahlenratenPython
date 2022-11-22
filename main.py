@@ -1,11 +1,11 @@
-import random
+from random import randint
 
 MIN_NUM = 1
 MAX_NUM = 100
 BOUNDARY_VALUE = 10
 
 
-def welcome_username_prompt() -> None:
+def welcome_username_prompt():
     user_name = input("Bitte geben Sie Ihren Benutzernamen ein: ")
     print(
         f"Hallo {user_name}! Ich denke an eine Zahl zwischen {MIN_NUM} und {MAX_NUM}. Welche Zahl ist es?"
@@ -22,6 +22,7 @@ def prompt_input() -> int:
             )
             if MIN_NUM > guess or guess > MAX_NUM:
                 raise ValueError
+
             return guess
         except ValueError:
             print("Eingabe unzulaessig. ", end="")
@@ -76,7 +77,7 @@ def guess_is_correct(
 
 def main_game() -> None:
     # welcome_username_prompt()
-    random_number = random.randint(MIN_NUM, MAX_NUM)
+    random_number = randint(MIN_NUM, MAX_NUM)
     amount_of_tries = 1
     guess = prompt_input()
     first_diff = None
