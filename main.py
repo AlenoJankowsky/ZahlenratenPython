@@ -76,7 +76,7 @@ def guess_is_correct(
 
 
 def main_game() -> None:
-    # welcome_username_prompt()
+    welcome_username_prompt()
     random_number = randint(MIN_NUM, MAX_NUM)
     amount_of_tries = 1
     guess = prompt_input()
